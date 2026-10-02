@@ -1,4 +1,4 @@
-﻿version: '3.8'
+version: '3.8'
 
 services:
   bot:
@@ -12,4 +12,4 @@ services:
       # y los perfiles del navegador (Cookies) sobrevivan a los reinicios.
       - ./data:/app/data
       # Montamos las reglas de negocio externamente para poder editarlas sin recompilar
-      - ./config/rules.json:/app/config/rules.json
+      - ./config:/app/config
