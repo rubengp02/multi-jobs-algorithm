@@ -58,7 +58,7 @@ multi-jobs-algorithm/
 
 ### Diagrama de Flujo del Orquestador
 
-`mermaid
+```mermaid
 graph TD
     subgraph Proveedores
         L[LinkedIn API] -->|JSON| B(BaseProvider)
