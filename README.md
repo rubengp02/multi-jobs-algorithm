@@ -74,8 +74,7 @@ graph TD
     C -->|Evaluación Salarial| F2[Banda Salarial]
     C -->|Stack Matching| F3[Tecnologías]
     
-    F3 -->|Match > 80%| DB[(aiosqlite
-Persistencia Local)]
+    F3 -->|Match > 80%| DB[(aiosqlite<br>Persistencia Local)]
     F3 -->|Descarte| Log[Telemetría]
     
     DB -->|Deduplicación| T[Aiogram Bot]
