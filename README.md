@@ -106,9 +106,10 @@ El proyecto está diseñado para desplegarse fácilmente en entornos Linux (espe
    ```
 
 4. **Variables de Entorno:**
-   Copia el archivo `.env.example` a `.env` y configura tus credenciales de Telegram y los límites algorítmicos deseados.
+   Copia los archivos de ejemplo para configurar tu entorno, credenciales de Telegram y reglas de Inteligencia Artificial (Stack tecnológico, localizaciones, salarios).
    ```bash
    cp .env.example .env
+   cp config/rules.example.json config/rules.json
    ```
 
 5. **Ejecutar el orquestador:**
