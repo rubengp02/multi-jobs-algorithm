@@ -95,13 +95,16 @@ Si prefieres aislar el entorno completamente, el repositorio incluye soporte ofi
    cd multi-jobs-algorithm
    cp .env.example .env
    cp config/rules.example.json config/rules.json
-   ``n2. Levanta el contenedor en segundo plano:
+   ``
+2. Levanta el contenedor en segundo plano:
    `ash
    docker compose up -d --build
-   ``n3. (Opcional) Revisa los logs en tiempo real:
+   ``
+3. (Opcional) Revisa los logs en tiempo real:
    `ash
    docker logs -f multi-jobs-bot
-   ``n
+   ``
+
 ---
 
 ### Despliegue Tradicional (Local/Bare-Metal)
