@@ -86,7 +86,25 @@ El proyecto está diseñado para desplegarse fácilmente en entornos Linux (espe
 *   **Python 3.11+**
 *   Google Chrome / Chromium instalado en el sistema.
 
-### Despliegue Local
+### Despliegue Rápido (Recomendado: Docker)
+Si prefieres aislar el entorno completamente, el repositorio incluye soporte oficial para Docker.
+
+1. Clona el repositorio y renombra los archivos de entorno:
+   `ash
+   git clone https://github.com/rubengp02/multi-jobs-algorithm.git
+   cd multi-jobs-algorithm
+   cp .env.example .env
+   cp config/rules.example.json config/rules.json
+   ``n2. Levanta el contenedor en segundo plano:
+   `ash
+   docker compose up -d --build
+   ``n3. (Opcional) Revisa los logs en tiempo real:
+   `ash
+   docker logs -f multi-jobs-bot
+   ``n
+---
+
+### Despliegue Tradicional (Local/Bare-Metal)
 1. **Clonar el repositorio:**
    ```bash
    git clone https://github.com/rubengp02/multi-jobs-algorithm.git

@@ -1,0 +1,11 @@
+﻿.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.git/
+.env
+data/
+tests/
+scripts/
+bot_update.tar.gz

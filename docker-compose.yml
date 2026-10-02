@@ -1,0 +1,15 @@
+﻿version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: multi-jobs-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Montamos la carpeta data para que la base de datos (SQLite) 
+      # y los perfiles del navegador (Cookies) sobrevivan a los reinicios.
+      - ./data:/app/data
+      # Montamos las reglas de negocio externamente para poder editarlas sin recompilar
+      - ./config/rules.json:/app/config/rules.json
