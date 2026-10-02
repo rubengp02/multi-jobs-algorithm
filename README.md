@@ -54,6 +54,34 @@ multi-jobs-algorithm/
 ```
 
 
+
+
+### Diagrama de Flujo del Orquestador
+
+`mermaid
+graph TD
+    subgraph Proveedores
+        L[LinkedIn API] -->|JSON| B(BaseProvider)
+        I[InfoJobs] -->|TLS Impersonation| B
+        M[Manfred] -->|XML Sitemap| B
+        P[Playwright SPAs] -->|DOM Parsing| B
+    end
+    
+    B -->|Normalización| J[JobItem Dataclass]
+    J --> C{Matcher Engine}
+    
+    C -->|Filtro Geográfico| F1[Regiones]
+    C -->|Evaluación Salarial| F2[Banda Salarial]
+    C -->|Stack Matching| F3[Tecnologías]
+    
+    F3 -->|Match > 80%| DB[(aiosqlite
+Persistencia Local)]
+    F3 -->|Descarte| Log[Telemetría]
+    
+    DB -->|Deduplicación| T[Aiogram Bot]
+    T -->|Notificación Push| U((Usuario en Telegram))
+`
+
 ## 🧠 Decisiones de Arquitectura (Design Document)
 
 Durante el diseño de este orquestador, tomé varias decisiones arquitectónicas críticas para asegurar la escalabilidad, resiliencia y bajo consumo del sistema, pensando siempre en su despliegue continuo (24/7) en hardware limitado como una Raspberry Pi 5.
