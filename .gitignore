@@ -69,3 +69,13 @@ scripts/prospect_*.py
 *.html
 *.pdf
 *.csv
+
+# Extensiones de seguridad genericas
+*.pem
+*.key
+*.cert
+*.sql
+*.zip
+*.rar
+*.jsonl
+*cookies*.json
