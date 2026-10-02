@@ -79,7 +79,7 @@ graph TD
     
     DB -->|Deduplicación| T[Aiogram Bot]
     T -->|Notificación Push| U((Usuario en Telegram))
-`
+```
 
 ## 🧠 Decisiones de Arquitectura (Design Document)
 
