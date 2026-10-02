@@ -1,0 +1,71 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Variables de entorno y secretos
+.env
+*.env
+secret*
+
+# Bases de datos locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# Carpetas de IDE
+.vscode/
+.idea/
+
+# Scripts de un solo uso o patches creados temporalmente por la IA
+fix_*.py
+patch_*.py
+convert_*.py
+test_*_static.py
+update_*.py
+
+
+
+bot_update.tar.gz
+
+
+config/rules.json
+
+data/*_session/
+data/provider_validation/
+data/job_audit/
+
+# Ignorar todo el contenido de data generado dinámicamente
+data/*
+!data/.keep
+
+# Archivos personales y scripts de despliegue SSH
+deploy_multi_jobs.py
+stop_service.py
+kill_rpi_bot.py
+hotfix_pi.py
+check_*.py
+tailor.py
+find_service.py
+unblock.py
+validate_providers.py
+metrics_*.jsonl
+metrics_recent.json
+analyze_companies.py
+api_hunter*.py
+delete_sopra.py
+execute_plan_*.py
+gen_core.py
+montaner_api_hunter.py
+wp_hunter.py
+ddg_search.py
+scripts/lanzador_correos_upv.py
+scripts/prospect_*.py
+*.html
+*.pdf
+*.csv

@@ -1,0 +1,13 @@
+[Unit]
+Description=Dedicated Chromium session for LinkedIn job collection
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/bots/bot_multi_jobs/scripts/raspberry/start_linkedin_chromium.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

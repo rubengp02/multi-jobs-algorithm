@@ -1,0 +1,83 @@
+{
+  "__COMENTARIO__": "Este es un archivo de ejemplo. Configura aquí tus tecnologías clave, consultoras conocidas y localizaciones preferidas. Renombra este archivo a 'rules.json' para que el orquestador lo cargue. Todo el motor de Inteligencia Artificial (matcher.py) usará estos arrays para filtrar qué trabajos son relevantes y cuáles descartar.",
+  "TECH_TOOLS_CATALOG": [
+    [
+      "Python",
+      [
+        "\\bpython\\b",
+        "django",
+        "fastapi",
+        "flask",
+        "pytest"
+      ]
+    ],
+    [
+      "JavaScript/TypeScript",
+      [
+        "javascript",
+        "typescript",
+        "\\bnode\\b",
+        "react",
+        "angular",
+        "vue"
+      ]
+    ],
+    [
+      "Data / AI",
+      [
+        "machine learning",
+        "deep learning",
+        "artificial intelligence",
+        "\\bml\\b",
+        "\\bia\\b",
+        "pandas",
+        "numpy"
+      ]
+    ],
+    [
+      "Cloud / DevOps",
+      [
+        "aws",
+        "azure",
+        "gcp",
+        "docker",
+        "kubernetes",
+        "ci/cd",
+        "terraform"
+      ]
+    ]
+  ],
+  "KNOWN_CONSULTANCIES": [
+    "consultora a",
+    "consultora b",
+    "outsourcing inc",
+    "empresa carnica de ejemplo"
+  ],
+  "PRIMARY_AREA": [
+    "madrid",
+    "barcelona",
+    "valencia",
+    "sevilla",
+    "bilbao",
+    "malaga",
+    "[INSERTA_AQUI_TU_CIUDAD]",
+    "[INSERTA_OTRA_CIUDAD_CERCANA]"
+  ],
+  "OTHER_CITIES": [
+    "zaragoza",
+    "murcia",
+    "palma",
+    "alicante",
+    "cordoba",
+    "valladolid",
+    "vigo",
+    "[AÑADE_TODAS_LAS_DEMAS_CIUDADES_DEL_PAIS_PARA_FILTRADO_REMOTO]"
+  ],
+  "REMOTE_KEYWORDS": [
+    "remoto",
+    "remote",
+    "teletrabajo",
+    "100% remoto",
+    "work from home"
+  ]
+}

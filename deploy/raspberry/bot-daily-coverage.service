@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily operational evidence audit for bot-multi-jobs
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=[TU_USUARIO]
+WorkingDirectory=/home/[TU_USUARIO]/bots/bot_multi_jobs
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/[TU_USUARIO]/bots/bot_multi_jobs/.venv/bin/python /home/[TU_USUARIO]/bots/bot_multi_jobs/daily_coverage_audit.py

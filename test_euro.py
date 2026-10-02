@@ -1,0 +1,28 @@
+import sys
+
+sys.path.append("/home/rubengaona/bots/bot_multi_jobs")
+import logging
+
+from bs4 import BeautifulSoup
+
+from config import load_config
+from providers.consultancies import build_consultancy_provider
+
+config = load_config()
+logger = logging.getLogger()
+extractor = build_consultancy_provider("eurofirms", config, logger)
+
+original_parse = extractor._parse_page
+
+
+def debug_parse(response):
+    soup = BeautifulSoup(response.text, "html.parser")
+    for a in soup.find_all("a", href=True):
+        if "job" in a["href"]:
+            print("Found job href:", a["href"])
+    return original_parse(response)
+
+
+extractor._parse_page = debug_parse
+
+extractor.fetch_jobs(max_pages=1, max_results=20)

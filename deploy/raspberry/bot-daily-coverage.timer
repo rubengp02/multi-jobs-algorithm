@@ -1,0 +1,11 @@
+[Unit]
+Description=Run daily operational evidence audit for bot-multi-jobs
+
+[Timer]
+OnCalendar=*-*-* 23:45:00
+Persistent=true
+RandomizedDelaySec=5m
+Unit=bot-daily-coverage.service
+
+[Install]
+WantedBy=timers.target
